@@ -6,7 +6,7 @@ jobs:
   explore-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: "miryala@straive.com"
+      - name: miryala.narayanareddy@straive.com
         run: echo "Hello, world!"
 
       - name: Checkout Repository
@@ -14,10 +14,10 @@ jobs:
       
       - name: Display Information
         run: |
-          echo "🚀 Workflow triggered by ${{ github.event_name }}"
-          echo "🐧 Running on ${{ runner.os }}"
-          echo "🔎 Branch: ${{ github.ref }}, Repo: ${{ github.repository }}"
+          echo "🚀 Workflow triggered by ${ github.event_name }"
+          echo "🐧 Running on ${ runner.os }"
+          echo "🔎 Branch: ${ github.ref }, Repo: ${ github.repository }"
           echo "💡 Repository cloned successfully"
           echo "📂 Listing repository files:"
-          ls ${{ github.workspace }}
-          echo "🍏 Job status: ${{ job.status }}"
+          ls ${ github.workspace }
+          echo "🍏 Job status: ${ job.status }"
