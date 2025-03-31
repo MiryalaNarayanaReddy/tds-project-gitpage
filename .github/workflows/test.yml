@@ -1,0 +1,23 @@
+name: GitHub Actions Demo
+
+on: [push]
+
+jobs:
+  explore-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "miryala@straive.com"
+        run: echo "Hello, world!"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Display Information
+        run: |
+          echo "🚀 Workflow triggered by ${{ github.event_name }}"
+          echo "🐧 Running on ${{ runner.os }}"
+          echo "🔎 Branch: ${{ github.ref }}, Repo: ${{ github.repository }}"
+          echo "💡 Repository cloned successfully"
+          echo "📂 Listing repository files:"
+          ls ${{ github.workspace }}
+          echo "🍏 Job status: ${{ job.status }}"
